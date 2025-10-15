@@ -1,0 +1,52 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\tea\\Desktop\\Study\\lab9\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7085B923-D2C6-45D7-AD75-F18DED3FADC0}|lab9\\lab9.csproj|c:\\users\\tea\\desktop\\study\\lab9\\lab9\\model1.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
+      "RelativeMoniker": "D:0:0:{7085B923-D2C6-45D7-AD75-F18DED3FADC0}|lab9\\lab9.csproj|solutionrelative:lab9\\model1.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7085B923-D2C6-45D7-AD75-F18DED3FADC0}|lab9\\lab9.csproj|c:\\users\\tea\\desktop\\study\\lab9\\lab9\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{7085B923-D2C6-45D7-AD75-F18DED3FADC0}|lab9\\lab9.csproj|solutionrelative:lab9\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Model1.edmx [Diagram1]",
+              "DocumentMoniker": "C:\\Users\\tea\\Desktop\\Study\\lab9\\lab9\\Model1.edmx",
+              "RelativeDocumentMoniker": "lab9\\Model1.edmx",
+              "ToolTip": "C:\\Users\\tea\\Desktop\\Study\\lab9\\lab9\\Model1.edmx [Diagram1]",
+              "RelativeToolTip": "lab9\\Model1.edmx [Diagram1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
+              "WhenOpened": "2025-10-15T03:36:03.166Z",
+              "EditorCaption": " [Diagram1]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\tea\\Desktop\\Study\\lab9\\lab9\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "lab9\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\tea\\Desktop\\Study\\lab9\\lab9\\MainWindow.xaml",
+              "RelativeToolTip": "lab9\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-10-15T01:16:11.884Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
