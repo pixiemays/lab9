@@ -11,7 +11,11 @@ namespace lab9
         public MainWindow()
         {
             InitializeComponent();
+            LoadProducts();
+        }
 
+        private void LoadProducts()
+        {
             ProductsList.ItemsSource = TradeEntities.GetContext().Product.ToList();
         }
 
@@ -19,11 +23,14 @@ namespace lab9
         {
             AddProductEdit addProduct = new AddProductEdit();
             addProduct.ShowDialog();
+            ReloadProducts(null, null);
         }
 
         private void ReloadProducts(object sender, RoutedEventArgs e)
         {
             TradeEntities.ResetContext();
+            LoadProducts();
+            MessageBox.Show("Reloaded");
         }
     }
 }

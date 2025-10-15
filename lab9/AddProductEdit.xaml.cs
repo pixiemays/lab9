@@ -17,14 +17,14 @@ namespace lab9
             {
                 var newProduct = new Product
                 {
-                    ProductArticleNumber = "DA223D",
-                    ProductName = "qweqweqwe",
-                    ProductDescription = "qweqweqwe",
-                    ProductManufacturer = "qweqweqwe",
-                    ProductCategory = "qweqweqwe",
-                    ProductCost = Convert.ToDecimal(1112),
-                    ProductMeasure = Convert.ToInt32(2),
-                    ProductStatus = "qweqweqwe"
+                    ProductArticleNumber = PArticle.Text,
+                    ProductName = PName.Text,
+                    ProductDescription = PDesc.Text,
+                    ProductManufacturer = PProd.Text,
+                    ProductCategory = PCat.Text,
+                    ProductCost = Convert.ToDecimal(PPrice.Text),
+                    ProductMeasure = Convert.ToInt32(PMeasure.Text),
+                    ProductStatus = PStatus.Text
                 };
             
                 TradeEntities.GetContext().Product.Add(newProduct);
