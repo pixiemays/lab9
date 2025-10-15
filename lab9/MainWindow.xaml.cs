@@ -18,19 +18,29 @@ namespace lab9
         {
             ProductsList.ItemsSource = TradeEntities.GetContext().Product.ToList();
         }
-
+        
         private void AddProductButton(object sender, RoutedEventArgs e)
         {
             AddProductEdit addProduct = new AddProductEdit();
             addProduct.ShowDialog();
             ReloadProducts(null, null);
         }
+        
+        private void EditProductButton(object sender, RoutedEventArgs e)
+        {
+            var button = sender as System.Windows.Controls.Button;
+            if (button?.Tag is Product product)
+            {
+                AddProductEdit editProduct = new AddProductEdit(product);
+                editProduct.ShowDialog();
+                ReloadProducts(null, null);
+            }
+        }
 
         private void ReloadProducts(object sender, RoutedEventArgs e)
         {
             TradeEntities.ResetContext();
             LoadProducts();
-            MessageBox.Show("Reloaded");
         }
     }
 }

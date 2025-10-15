@@ -5,13 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:lab9"
         mc:Ignorable="d"
-        Title="MainWindow" Height="650" Width="725">
+        Title="Управление товарами" Height="650" Width="850">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="auto" />
             <RowDefinition Height="*" />
+            <RowDefinition Height="auto" />
         </Grid.RowDefinitions>
-        <ListView Name="ProductsList" ScrollViewer.VerticalScrollBarVisibility="Visible" Height="550" Margin="10">
+        
+        <ListView Name="ProductsList" Grid.Row="0" 
+                  ScrollViewer.VerticalScrollBarVisibility="Visible" 
+                  Margin="10">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Border BorderBrush="Black" BorderThickness="1" Margin="5" Padding="5">
@@ -23,31 +26,61 @@
                                 <ColumnDefinition Width="100" />
                             </Grid.ColumnDefinitions>
 
-                            <Image Source="{Binding ProductPhoto}" Width="140" Height="140" Grid.Column="0"/>
+                            <Image Source="{Binding ProductPhoto}" 
+                                   Width="180" Height="140" 
+                                   Grid.Column="0"/>
 
                             <StackPanel Grid.Column="1" Margin="10,0">
-                                <TextBlock Text="{Binding ProductName}" FontWeight="Bold"/>
-                                <TextBlock Text="{Binding ProductDescription}" />
-                                <TextBlock Text="Производитель:" FontWeight="Bold"/>
+                                <TextBlock Text="{Binding ProductName}" 
+                                          FontWeight="Bold" FontSize="14"/>
+                                <TextBlock Text="{Binding ProductDescription}" 
+                                          TextWrapping="Wrap" Margin="0,5,0,0"/>
+                                <TextBlock Text="Производитель:" 
+                                          FontWeight="Bold" Margin="0,10,0,0"/>
                                 <TextBlock Text="{Binding ProductManufacturer}" />
-                                <TextBlock Text="Цена:" FontWeight="Bold"/>
-                                <TextBlock Text="{Binding ProductCost}" />
+                                <TextBlock Text="Цена:" 
+                                          FontWeight="Bold" Margin="0,5,0,0"/>
+                                <TextBlock>
+                                    <Run Text="{Binding ProductCost, StringFormat='{}{0:N2}'}" />
+                                    <Run Text=" руб." />
+                                </TextBlock>
                             </StackPanel>
-                            <Border BorderBrush="Gray" BorderThickness="1" Margin="5" Grid.Column="2">
-                                <TextBlock Text="{Binding ProductMeasureText}" 
-                                   VerticalAlignment="Center" 
-                                   HorizontalAlignment="Center" 
-                                   TextWrapping="Wrap"/>
+                            
+                            <Border BorderBrush="Gray" BorderThickness="1" 
+                                   Margin="5" Grid.Column="2">
+                                <StackPanel VerticalAlignment="Center" 
+                                           HorizontalAlignment="Center">
+                                    <TextBlock Text="{Binding ProductQuantityInStock}" 
+                                              FontSize="20"
+                                              HorizontalAlignment="Center"/>
+                                    <TextBlock Text="шт." 
+                                              HorizontalAlignment="Center"/>
+                                </StackPanel>
                             </Border>
-                            <Button Grid.Column="3" Click="AddProductButton">Редактировать</Button>
+                            
+                            <Button Grid.Column="3" 
+                                   Height="30" 
+                                   Margin="5"
+                                   VerticalAlignment="Center"
+                                   Click="EditProductButton"
+                                   Tag="{Binding}">
+                                Редактировать
+                            </Button>
                         </Grid>
                     </Border>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        <StackPanel Grid.Row="1" Orientation="Horizontal">
-            <Button Margin="5" Width="100" Height="25" Click="AddProductButton">Добавить товар</Button>
-            <Button Margin="5" Width="100" Height="25" Click="ReloadProducts">Релоад стр</Button>
+        
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="10,5">
+            <Button Margin="5" Width="120" Height="30" 
+                   Click="AddProductButton">
+                Добавить товар
+            </Button>
+            <Button Margin="5" Width="120" Height="30" 
+                   Click="ReloadProducts">
+                Обновить список
+            </Button>
         </StackPanel>
     </Grid>
 </Window>
