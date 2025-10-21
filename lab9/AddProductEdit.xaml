@@ -5,35 +5,45 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:local="clr-namespace:lab9"
         mc:Ignorable="d"
-        Title="AddProduct" Height="450" Width="800">
-    <Grid>
+        Title="Добавление товара" Height="450" Width="800"
+        Background="#F0F0F0">
+    <Grid Margin="30">
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
             <StackPanel Orientation="Horizontal">
-                <StackPanel Orientation="Vertical" Margin="10, 0">
-                    <TextBlock Margin="7">Артикль</TextBlock>
-                    <TextBlock Margin="7">Наименование</TextBlock>
-                    <TextBlock Margin="7">Описание</TextBlock>
-                    <TextBlock Margin="7">Производитель</TextBlock>
-                    <TextBlock Margin="7">Категория</TextBlock>
-                    <TextBlock Margin="7">Цена</TextBlock>
-                    <TextBlock Margin="7">Наличие на складе</TextBlock>
-                    <TextBlock Margin="7">ProductStatus</TextBlock>
+                <StackPanel Orientation="Vertical" Margin="10,0" Width="130">
+                    <TextBlock Margin="0, 9" FontWeight="SemiBold">Артикул</TextBlock>
+                    <TextBlock Margin="0, 9" FontWeight="SemiBold">Наименование</TextBlock>
+                    <TextBlock Margin="0, 11" FontWeight="SemiBold">Описание</TextBlock>
+                    <TextBlock Margin="0, 11" FontWeight="SemiBold">Производитель</TextBlock>
+                    <TextBlock Margin="0, 11" FontWeight="SemiBold">Категория</TextBlock>
+                    <TextBlock Margin="0, 9" FontWeight="SemiBold">Цена</TextBlock>
+                    <TextBlock Margin="0, 11" FontWeight="SemiBold">Наличие на складе</TextBlock>
+                    <TextBlock Margin="0, 9" FontWeight="SemiBold">Статус</TextBlock>
                 </StackPanel>
-                <StackPanel Orientation="Vertical" Width="120">
-                    <TextBox Margin="5" Name="PArticle"/>
-                    <TextBox Margin="5" Name="PName" />
-                    <TextBox Margin="5" Name="PDesc" />
-                    <TextBox Margin="5" Name="PProd" />
-                    <TextBox Margin="5" Name="PCat" />
-                    <TextBox Margin="5" Name="PPrice" />
-                    <TextBox Margin="5" Name="PMeasure" />
-                    <TextBox Margin="5" Name="PStatus" />
-                    <Image Name="PImage" Margin="5"  />
+                <StackPanel Orientation="Vertical" Width="200" Margin="0,0,20,0">
+                    <TextBox Margin="5" Name="PArticle" Padding="5" Height="26"/>
+                    <TextBox Margin="5" Name="PName" Padding="5" Height="26"/>
+                    <TextBox Margin="5" Name="PDesc" Padding="5" Height="26"/>
+                    <TextBox Margin="5" Name="PProd" Padding="5" Height="26"/>
+                    <TextBox Margin="5" Name="PCat" Padding="5" Height="26"/>
+                    <TextBox Margin="5" Name="PPrice" Padding="5" Height="26"/>
+                    <TextBox Margin="5" Name="PMeasure" Padding="5" Height="26"/>
+                    <TextBox Margin="5" Name="PStatus" Padding="5" Height="26"/>
                 </StackPanel>
+                <Border BorderBrush="#CCCCCC" BorderThickness="2" Width="150" Height="150" 
+                        Background="White" VerticalAlignment="Top" Margin="0,5,0,0">
+                    <Image Name="PImage" Stretch="Uniform"/>
+                </Border>
             </StackPanel>
-            <StackPanel Orientation="Horizontal">
-                <Button Height="23" Width="125" Margin="10" Click="AddButton">Сохранить/Добавить</Button>
-                <Button Height="23" Width="125" Margin="10" Click="LoadPhoto">Загрузить фото</Button>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,20,0,0">
+                <Button Height="32" Width="150" Margin="5" Click="AddButton" 
+                        Background="#4CAF50" Foreground="White" 
+                        FontWeight="SemiBold" BorderThickness="0" 
+                        Cursor="Hand">Сохранить</Button>
+                <Button Height="32" Width="150" Margin="5" Click="LoadPhoto" 
+                        Background="#2196F3" Foreground="White" 
+                        FontWeight="SemiBold" BorderThickness="0" 
+                        Cursor="Hand">Загрузить фото</Button>
             </StackPanel>
         </StackPanel>
     </Grid>

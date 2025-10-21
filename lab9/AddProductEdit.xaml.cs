@@ -132,9 +132,9 @@ namespace lab9
                     _currentProduct.ProductPhoto = File.ReadAllBytes(openDialog.FileName);
                 }
             }
-            catch
+            catch (Exception ex)
             {
-                MessageBox.Show("Ошибка загрузки картинки", "Ошибка");
+                MessageBox.Show($"Ошибка загрузки картинки: {ex.Message}", "Ошибка");
             }
         }
     }
